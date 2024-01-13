@@ -19,6 +19,11 @@ const ITEMS: OrderMenu[] = [
 
 const MenuItems: React.FC = () => {
     const [Items, setItems] = useState<OrderMenu[]>(ITEMS);
+    const AddItem = (index: number) => {
+        const addedItems = [...Items];
+        addedItems[index].count++;
+        setItems(addedItems);
+    };
 
 }
 
