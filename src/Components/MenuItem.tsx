@@ -25,6 +25,18 @@ const MenuItems: React.FC = () => {
         setItems(addedItems);
     };
 
+    const DeleteItem = (index: number) => {
+        const deletedItems = [...Items];
+        deletedItems[index].count = Math.max(0, deletedItems[index].count - 1);
+        setItems(deletedItems);
+    };
+
+    const TotalPrice = () => {
+        return Items.reduce((total, item) => {
+            return total + item.count * item.price;
+        }, 0);
+    }
+
 }
 
 const CoffeeItems: React.FC<MenuProps> = ({name, price, image, count, onAdd, onDelete}) => {
