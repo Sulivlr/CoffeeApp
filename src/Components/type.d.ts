@@ -7,7 +7,7 @@ export interface MenuProps {
     onDelete: () => void;
 }
 
-export interface OrderDetails {
+export interface OrderMenu {
     name: string;
     price: number;
     image: string;
