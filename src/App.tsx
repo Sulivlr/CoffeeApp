@@ -25,8 +25,8 @@ function App() {
           <p>{name}</p>
           <p>Price: {price} KGS</p>
           <p>Count: {count}</p>
-          <button onClick={onAdd}>Add</button>
-          <button onClick={onDelete}>Delete</button>
+          <button className="button" onClick={onAdd}>Add</button>
+          <button className="button" onClick={onDelete}>Delete</button>
         </div>
     );
   };
